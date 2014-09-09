@@ -117,7 +117,7 @@ static NSString *newSHA1String(const char *bytes, size_t length) {
         return [data base64EncodedStringWithOptions:0];
     }
     
-    return [data base64Encoding];
+    return [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
 }
 
 @implementation NSData (SRWebSocket)
